@@ -1,0 +1,42 @@
+#button{
+    text-align: center;
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+
+}
+#button:hover{
+    background-color: red;
+    transition: 0.8s;
+}
+.col-sm-3{
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  border: 2px solid #ddd; /* İsteğe bağlı: kutu sınırı */
+  padding: 10px; /* İsteğe bağlı: içerikle arka arası boşluk */
+  position: relative; 
+  
+  border-radius: 10px;
+  
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+#cart .item{
+    margin-right: 50px;
+}
+.row{
+    margin: 5px;
+    width: 100%;
+    
+}
+#resim{
+    text-align: center;
+    border-radius: 5px;
+    padding:10px;
+}

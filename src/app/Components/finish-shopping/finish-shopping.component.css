@@ -1,0 +1,40 @@
+.container{
+  width: 80%;
+  height: 80vh;
+  background-color: azure;
+}
+.address{
+  width: 50%;
+  left: 0;
+  border-right: 0px;
+}
+.payment{
+  width: 50%;
+  right: 0;
+}
+#finish{
+
+  height: 70%;
+  background-color: white;
+  font-size: large;
+  margin-top: 2%;
+}
+.add_address{
+  width: 49%;
+  height: 30%;
+  left: 1%;
+  text-align: center;
+  margin-top: 10%;
+  background-color: rgb(241, 249, 249);
+  cursor: pointer;
+  border-radius: 5px;
+  border-style:groove ;
+  
+}
+.information{
+  
+  height: 15%;
+}
+.address-contaniner{
+  height: 85%;
+}

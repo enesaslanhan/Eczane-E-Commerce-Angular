@@ -1,0 +1,46 @@
+
+<div class="content">
+    
+    <div class="col-md-12">
+        <div class="card">
+            <div class="card-header"><button (click)="userLogin()" class="login" style="float: left;" >Giriş Yapınız</button><button (click)="userAdd()" class="login" style="float: right;" >Kayıt Olunuz</button></div>
+            <div class="card-body" *ngIf="log==1">
+                <form [formGroup]="userAddForm">
+                    <label for="firstName">Adı</label>
+                    <div class="form-group">
+                        <input type="text" id="firstName" formControlName="firstName" class="form-control">
+                    </div>
+                    <label for="lastName">Soyadı</label>
+                    <div class="form-group">
+                        <input type="text" id="lastName" formControlName="lastName" class="form-control">
+                    </div>
+                    <label for="email">Email</label>
+                    <div class="form-group">
+                        <input type="email" id="email" formControlName="email" class="form-control">
+                    </div>
+                    <label for="password">Şifre</label>
+                    <div class="form-group">
+                        <input type="password" id="password" formControlName="password" class="form-control">
+                    </div>
+                    <p style="font-size: 14px;font-family: monospace;">Şifreniz en az 6 karakter ve en fazla 64 karakter olmalı.</p>
+                </form>
+                <div class="card-footer"><button (click)="register()" id="ekle"class="btn btn-fill btn-danger">ÜYE OL</button></div>
+            </div>
+            <div class="card-body" *ngIf="log==0">
+                <form [formGroup]="userLoginForm">
+                    <label for="telephone">Email adresini giriniz</label>
+                    <div class="form-group">
+                        <input type="email" id="telephone" formControlName="email" class="form-control">
+                    </div>
+                    <label for="password">Şifre</label>
+                    <div class="form-group">
+                        <input type="password" id="password" formControlName="password" class="form-control">
+                    </div>
+                </form>
+                    <div class="card-footer"><button (click)="login()" id="ekle"class="btn btn-fill btn-danger">Giriş Yap</button></div>
+            </div>
+            
+        </div>
+    </div>
+    
+</div>

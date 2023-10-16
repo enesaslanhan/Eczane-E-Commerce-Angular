@@ -1,0 +1,29 @@
+<!--<div *ngIf="cartItems.length>0">
+    <table class="table">
+        <tr>
+            <th>Ürün ismi</th>
+            <th>Aded</th>
+            <th>Fiyat</th>
+        </tr>
+        <tr *ngFor="let cartItem of cartItems">
+            <td>{{cartItem.product.name}}</td>
+            <td>{{cartItem.quantity}}</td>
+            <td>{{cartItem.product.price*cartItem.quantity |currency}}</td>
+            <button (click)="removeFromCart(cartItem.product)"id="removeButton" style="background-color: white;border: none;"><img src="assets/pictures/trash.png" alt=""></button>
+        </tr>
+    </table>
+    <h4 style="float: right;">Toplam Fiyat ={{totalPrice|currency}}</h4>
+</div>
+-->
+
+<div class="container" *ngIf="sepet.length>0">
+    <H4 style="padding: 10px;">Sepetim ({{sepet.length}} Ürün)</H4>
+    <div class="cartItem" style="display: flex;" *ngFor="let cartItem of sepet">
+        <div class="col-md-3">{{cartItem.product.name}}</div>
+        <div class="col-md-3">{{cartItem.product.price}}</div>
+        <div class="col-md-3"><button (click)="decrease(cartItem)" class="counter">-</button>{{cartItem.quantity}} <button (click)="increase(cartItem)" class="counter">+</button></div>
+        <div class="col-md-3"><button (click)="removeCart(cartItem)" id="removeButton" style="background-color: white;border: none;"><img src="assets/pictures/trash.png" alt=""></button></div>
+    </div>
+    <div><h4 style="float: right;margin-bottom: 10px;">Toplam Fiyat ={{totalPrice|currency}}</h4></div>
+    <div style="margin-bottom: 20px;" ><button class="completion" (click)="completion()">Alışverişi Tamamla</button></div>
+</div>

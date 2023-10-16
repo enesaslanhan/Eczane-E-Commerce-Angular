@@ -1,0 +1,33 @@
+.content{
+    width: 40%;
+    margin: 0% auto;
+}
+.card-header{
+    text-align: center;
+    color: white;
+    background-color: rgb(58, 155, 19);
+}
+#ekle{
+    width: 80%;
+    
+}
+#ekle:hover{
+    background-color: green;
+    transition: 0.7s;
+}
+.card{
+    background-color: wheat;
+    color: black;
+    font-family: fantasy;
+}
+label{
+    margin: 7px 0;
+}
+.login{
+    width: 48%;
+    border: none;
+    border-radius:10px ;
+}
+.card-footer{
+    text-align: center;
+}

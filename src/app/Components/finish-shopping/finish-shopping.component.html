@@ -1,0 +1,47 @@
+<div class="container">
+  <div class="information">
+    <button id="finish" class="address">Adres bilgileri</button>
+    <button id="finish" class="payment">Ödeme Bilgileri</button>
+  </div>
+  <div class="address-contaniner">
+    <div class="add_address" (click)="openModal()"><h1 style="font-size: 20px; margin-top: 50px ;">Yeni Adres Ekle</h1></div>
+  </div>
+</div>
+      
+<div class="modal" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h4 class="modal-title">Adres Bilgileriniz</h4>
+        <button type="button" class="btn-close" (click)="closeModal()" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+        <form [formGroup]="addressForm">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Şehir</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" formControlName="şehir">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">İlçe</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1"formControlName="ilçe">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Sokak</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1"formControlName="sokak">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label" >Bina No/kat</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1"formControlName="bina">
+          </div>
+        </form>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" (click)="addAddress()" data-bs-dismiss="modal">Ekle</button>
+      </div>
+
+    </div>
+  </div>
+</div>

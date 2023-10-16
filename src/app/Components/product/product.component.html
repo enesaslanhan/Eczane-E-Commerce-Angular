@@ -1,0 +1,48 @@
+
+<div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label" style="font-size: 20px;" >Ürün ara</label>
+    <input type="text" [(ngModel)]="filterText" class="form-control" id="filterText" placeholder="Arama ifadesi giriniz">
+  </div>
+  
+  <div *ngIf="filterText" class="alert alert-success">
+    {{filterText}} 
+  </div>
+<!--
+<table class="table"> 
+    <tr>
+        <th>Id</th>
+        <th>Ürün Adı</th>
+        <th>Açıklaması</th>
+        <th>Fiyatı</th>
+        <th>Kdv'li Fiyat</th>
+        <th>Stok Adedi</th>
+    </tr>
+    <tr *ngFor="let product of products |filterPipe:filterText">
+        <td>{{product.id}}</td>
+        <td>{{product.name |uppercase}}</td> 
+        <td>{{product.desc}}</td>
+        <td>{{product.price |currency}}</td>
+        <td>{{product.price |vatAdded:10 |currency}}</td>
+        <td>{{product.quantity}}</td>
+        <button (click)="addToCart(product)" type="button" class="btn btn-primary" id="button">Sepete Ekle</button>
+    </tr>   
+</table>
+<div class="mb-3" style="display: flex;">
+    <button class="btn btn-dark" (click)="SetTotalPrice()">Sepet tutarını</button>
+    <h3 *ngIf="totalPrice!=0">{{totalPrice |currency}}</h3>
+</div>
+-->
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-3"*ngFor="let product of products |filterPipe:filterText">
+            <img id="resim" src="assets/pictures/{{product.name}}.png" width="98%" height="40%">
+            <h3 style="text-align: center; font-size: 20px;">{{product.name}}</h3>
+            <p style="text-align: center;">{{product.desc}}</p>
+            <span>{{product.price|currency}}</span> 
+            
+            <button type="button" (click)="addToCart(product)" class="btn btn-primary" id="button">Sepete Ekle</button>
+        </div>
+    </div>
+</div>
+
